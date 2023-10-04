@@ -1,0 +1,152 @@
+//make color palette
+$color-palette: (
+    "primary": #007bff,
+    "secondary": #6c757d,
+    "success": #28a745,
+    "info": #17a2b8,
+    "warning": #ffc107,
+    "danger": #dc3545,
+    "light": #f8f9fa,
+    "dark": #343a40
+);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    background-color: map-get($color-palette, "dark");
+    height: 100%;
+    width: 100%;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    min-height: 50px;
+    height: 6%;
+    background-color: map-get($color-palette, "dark" );
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    
+    height: 100%;
+    min-width: 50px;
+    width: 6%;
+    min-width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    
+    
+}
+
+.logo i#hippohover {
+    display: none;
+}
+
+.logo:hover i#hippo {
+    display: none;
+}
+
+.logo:hover i#hippohover {
+    display: inline-block;
+}
+
+.logo i {
+    font-size: 2em;
+}
+
+.links {
+    height: 100%;
+    min-width: 500px;
+    width: 500px;
+}
+
+.links ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: map-get($color-palette, "light");
+    font-weight: bold;
+    margin: 3px;
+    font: 1.5em sans-serif;
+    background-color: map-get($color-palette, "secondary" );
+    padding: 5px;
+    transition: 0.7s;
+}
+
+.links ul li a:hover {
+    text-decoration: none;
+    color: map-get($color-palette, "light");
+    font-weight: bold;
+    margin: 3px;
+    font: 1.5em sans-serif;
+    background-color: map-get($color-palette, "info" );
+    padding: 5px;
+    transition: 0.7s;
+}
+
+.image {
+
+    height: 70%;
+    background-image: url(https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+    font: 4em arial;
+    font-weight: bold;
+
+}
+
+.contents {
+    height: 24%;
+    min-height: 150px;
+    max-height: 300px;
+    background-color: map-get($color-palette, "dark" );
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.content {
+    margin: 10px;
+    text-align: center;
+    background-color: map-get($color-palette, "secondary" );
+    min-width: 150px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: map-get($color-palette, "light" );
+}
